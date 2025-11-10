@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 240 280" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<!-- Enhanced gradients -->
+		<linearGradient id="skullMainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" style="stop-color:#00ff41;stop-opacity:0.9" />
+			<stop offset="30%" style="stop-color:#00ffff;stop-opacity:1" />
+			<stop offset="70%" style="stop-color:#0080ff;stop-opacity:1" />
+			<stop offset="100%" style="stop-color:#8000ff;stop-opacity:0.8" />
+		</linearGradient>
+		<radialGradient id="eyeGlow" cx="50%" cy="50%" r="60%">
+			<stop offset="0%" style="stop-color:#ff0040;stop-opacity:1" />
+			<stop offset="50%" style="stop-color:#00ff41;stop-opacity:0.8" />
+			<stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+		</radialGradient>
+		<linearGradient id="teethGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+			<stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+			<stop offset="100%" style="stop-color:#00ff41;stop-opacity:0.7" />
+		</linearGradient>
+		<!-- Filter for cyber glow -->
+		<filter id="cyberGlow" x="-50%" y="-50%" width="200%" height="200%">
+			<feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+			<feMerge> 
+				<feMergeNode in="coloredBlur"/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+	</defs>
+	
+	<!-- Background cyber grid -->
+	<defs>
+		<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+			<path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00ff41" stroke-width="0.5" opacity="0.2"/>
+		</pattern>
+	</defs>
+	<rect width="240" height="280" fill="url(#grid)" opacity="0.3"/>
+	
+	<!-- Main skull structure - more realistic -->
+	<path d="M120 40 C90 40 60 65 55 95 L50 120 C48 140 45 155 42 170 C40 185 38 200 45 215 C50 225 60 235 80 240 L160 240 C180 235 190 225 195 215 C202 200 200 185 198 170 C195 155 192 140 190 120 L185 95 C180 65 150 40 120 40 Z" 
+		  fill="none" stroke="url(#skullMainGrad)" stroke-width="4" filter="url(#cyberGlow)"/>
+	
+	<!-- Forehead cyber lines -->
+	<path d="M70 85 Q120 75 170 85" stroke="#00ffff" stroke-width="2" fill="none" opacity="0.8"/>
+	<path d="M75 95 Q120 85 165 95" stroke="#0080ff" stroke-width="1.5" fill="none" opacity="0.6"/>
+	<path d="M80 105 Q120 95 160 105" stroke="#00ff41" stroke-width="1" fill="none" opacity="0.4"/>
+	
+	<!-- Enhanced eye sockets -->
+	<ellipse cx="85" cy="125" rx="25" ry="30" fill="#000" stroke="#00ff41" stroke-width="3" opacity="0.9"/>
+	<ellipse cx="155" cy="125" rx="25" ry="30" fill="#000" stroke="#00ff41" stroke-width="3" opacity="0.9"/>
+	
+	<!-- Inner eye glow -->
+	<ellipse cx="85" cy="125" rx="18" ry="22" fill="url(#eyeGlow)" opacity="0.6"/>
+	<ellipse cx="155" cy="125" rx="18" ry="22" fill="url(#eyeGlow)" opacity="0.6"/>
+	
+	<!-- Static cyber pupils -->
+	<circle cx="85" cy="125" r="8" fill="#ff0040" opacity="1"/>
+	<circle cx="155" cy="125" r="8" fill="#ff0040" opacity="1"/>
+	
+	<!-- Data stream lines from eyes -->
+	<path d="M85 125 L75 115 L65 125 M85 125 L95 115 L105 125" stroke="#00ffff" stroke-width="1.5" opacity="0.6" fill="none"/>
+	<path d="M155 125 L145 115 L135 125 M155 125 L165 115 L175 125" stroke="#00ffff" stroke-width="1.5" opacity="0.6" fill="none"/>
+	
+	<!-- Enhanced nasal cavity -->
+	<path d="M120 145 L105 175 L120 190 L135 175 Z" fill="#000" stroke="#0080ff" stroke-width="2"/>
+	<path d="M120 150 L110 170 L120 180 L130 170 Z" fill="none" stroke="#00ff41" stroke-width="1" opacity="0.7"/>
+	
+	<!-- Cheekbone structure -->
+	<path d="M65 140 Q85 150 105 145" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.5"/>
+	<path d="M175 140 Q155 150 135 145" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.5"/>
+	
+	<!-- Enhanced jaw with cyber details -->
+	<path d="M60 200 Q120 220 180 200" stroke="#00ff41" stroke-width="4" fill="none"/>
+	<path d="M65 205 Q120 225 175 205" stroke="#0080ff" stroke-width="2" fill="none" opacity="0.8"/>
+	<path d="M70 210 Q120 230 170 210" stroke="#00ffff" stroke-width="1" fill="none" opacity="0.6"/>
+	
+	<!-- Detailed teeth with cyber glow -->
+	<rect x="85" y="205" width="6" height="25" fill="url(#teethGrad)" rx="1"/>
+	<rect x="95" y="205" width="6" height="30" fill="url(#teethGrad)" rx="1"/>
+	<rect x="105" y="205" width="6" height="28" fill="url(#teethGrad)" rx="1"/>
+	<rect x="115" y="205" width="6" height="32" fill="url(#teethGrad)" rx="1"/>
+	<rect x="125" y="205" width="6" height="28" fill="url(#teethGrad)" rx="1"/>
+	<rect x="135" y="205" width="6" height="30" fill="url(#teethGrad)" rx="1"/>
+	<rect x="145" y="205" width="6" height="25" fill="url(#teethGrad)" rx="1"/>
+	
+	<!-- Cyber cracks and battle damage -->
+	<path d="M95 70 L100 90 L105 85 M110 75 L115 95 L120 90 M140 80 L135 100 L145 95" stroke="#ff0080" stroke-width="2" opacity="0.8"/>
+	<path d="M70 160 L80 170 M160 160 L170 170" stroke="#ff0040" stroke-width="1.5" opacity="0.7"/>
+	
+	<!-- Binary/hex code around skull -->
+	<text x="25" y="60" font-family="Courier New, monospace" font-size="10" fill="#00ff41" opacity="0.8">0xFF</text>
+	<text x="200" y="70" font-family="Courier New, monospace" font-size="10" fill="#0080ff" opacity="0.8">0x41</text>
+	<text x="30" y="200" font-family="Courier New, monospace" font-size="10" fill="#ff0080" opacity="0.8">0xDEAD</text>
+	<text x="180" y="210" font-family="Courier New, monospace" font-size="10" fill="#00ffff" opacity="0.8">0xBEEF</text>
+	<text x="15" y="140" font-family="Courier New, monospace" font-size="8" fill="#00ff41" opacity="0.6">&lt;/skull&gt;</text>
+	<text x="190" y="150" font-family="Courier New, monospace" font-size="8" fill="#8000ff" opacity="0.6">{hack}</text>
+	
+	<!-- Static terminal cursor -->
+	<rect x="210" y="250" width="3" height="15" fill="#00ff41" opacity="0.9"/>
+	<text x="180" y="262" font-family="Courier New, monospace" font-size="10" fill="#00ff41" opacity="0.7">root@</text>
+</svg>
