@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<!-- Gradient for skull glow -->
+		<linearGradient id="skullGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+			<stop offset="0%" style="stop-color:#00ff41;stop-opacity:1" />
+			<stop offset="50%" style="stop-color:#0080ff;stop-opacity:1" />
+			<stop offset="100%" style="stop-color:#ff0080;stop-opacity:1" />
+		</linearGradient>
+		<!-- Shadow gradient -->
+		<radialGradient id="shadowGradient" cx="50%" cy="50%" r="50%">
+			<stop offset="0%" style="stop-color:#00ff41;stop-opacity:0.3" />
+			<stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+		</radialGradient>
+	</defs>
+	
+	<!-- Skull shadow/glow base -->
+	<ellipse cx="100" cy="160" rx="80" ry="20" fill="url(#shadowGradient)" opacity="0.6"/>
+	
+	<!-- Main skull shape -->
+	<path d="M100 30 C70 30 45 55 45 85 L45 105 C45 125 35 140 35 155 L35 175 C35 185 45 195 65 195 L135 195 C155 195 165 185 165 175 L165 155 C165 140 155 125 155 105 L155 85 C155 55 130 30 100 30 Z" 
+		  fill="none" stroke="url(#skullGradient)" stroke-width="3" opacity="0.9"/>
+	
+	<!-- Forehead detail lines -->
+	<path d="M60 70 Q100 65 140 70" stroke="#00ff41" stroke-width="1.5" fill="none" opacity="0.7"/>
+	<path d="M65 80 Q100 75 135 80" stroke="#0080ff" stroke-width="1" fill="none" opacity="0.5"/>
+	
+	<!-- Eye sockets - larger and more menacing -->
+	<circle cx="75" cy="95" r="18" fill="#000" stroke="#00ff41" stroke-width="2"/>
+	<circle cx="125" cy="95" r="18" fill="#000" stroke="#00ff41" stroke-width="2"/>
+	
+	<!-- Glowing dots in eye sockets -->
+	<circle cx="75" cy="95" r="4" fill="#00ff41" opacity="0.8">
+		<animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle cx="125" cy="95" r="4" fill="#00ff41" opacity="0.8">
+		<animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+	</circle>
+	
+	<!-- Nasal cavity - more realistic -->
+	<path d="M100 110 L85 140 L100 150 L115 140 Z" fill="#000" stroke="#0080ff" stroke-width="1.5"/>
+	
+	<!-- Jaw structure -->
+	<path d="M65 160 Q100 170 135 160" stroke="#00ff41" stroke-width="2.5" fill="none"/>
+	<path d="M70 165 Q100 175 130 165" stroke="#0080ff" stroke-width="1.5" fill="none" opacity="0.7"/>
+	
+	<!-- Teeth - more detailed -->
+	<rect x="80" y="165" width="5" height="20" fill="#00ff41" opacity="0.9"/>
+	<rect x="87" y="165" width="5" height="25" fill="#ffffff" opacity="0.8"/>
+	<rect x="94" y="165" width="5" height="22" fill="#00ff41" opacity="0.9"/>
+	<rect x="101" y="165" width="5" height="25" fill="#ffffff" opacity="0.8"/>
+	<rect x="108" y="165" width="5" height="22" fill="#00ff41" opacity="0.9"/>
+	<rect x="115" y="165" width="5" height="20" fill="#ffffff" opacity="0.8"/>
+	
+	<!-- Cracks and details -->
+	<path d="M90 50 L95 70 M110 55 L105 75 M125 60 L120 80" stroke="#ff0080" stroke-width="1" opacity="0.6"/>
+	
+	<!-- Binary code floating around skull -->
+	<text x="40" y="50" font-family="monospace" font-size="8" fill="#00ff41" opacity="0.6">1010</text>
+	<text x="150" y="60" font-family="monospace" font-size="8" fill="#0080ff" opacity="0.6">0110</text>
+	<text x="45" y="180" font-family="monospace" font-size="8" fill="#ff0080" opacity="0.6">1101</text>
+	<text x="145" y="170" font-family="monospace" font-size="8" fill="#00ff41" opacity="0.6">0101</text>
+</svg>
